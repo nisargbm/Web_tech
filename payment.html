@@ -1,0 +1,20 @@
+<html>
+<head><title>Payment</title></head>
+<body background="background3.jpg" >
+    <br><br><br>
+    <center>
+      <hr>
+      <hr>
+      <form name="ccForm"  method="POST">
+      <h3>Enter Credit Card Information</h3>
+         <input type="text" placeholder="Name" name="name" id="name" required /><br><br>
+         <input type="text" placeholder="Credit Card Number" id="ccnumber" required /><br><br>
+         <input type="date" placeholder="Expiry date" name="expirydate" id="expirydate" required /><br><br>
+         <input type="date" placeholder="Date of Birth" name="dob" id="dob" required /><br><br>
+      <input type="submit" value="Pay" onclick="ccValidation()" /><br>
+    </form>
+   <a href="home.html">Home</a>
+   </center>
+   <script type="text/javascript" src="validation.js"></script>
+</body>
+</html>
