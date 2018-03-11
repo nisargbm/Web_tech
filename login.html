@@ -1,30 +1,28 @@
 <html>
 <head>
-</head>
-<body background="background3.jpg">
-	<h1>Website</h1>
-	<hr>
-	<td colspan="3" width = 2000>
-		<nav>
-			<a href="home.html">Home</a> |
- 			<a href="bookCatalogue.html">Menu</a> |
- 			<a href=" profile.html">Profile</a> |
- 			<a href="login.html">Login</a> |
- 			<a href="register.html">Register</a> |
- 			<a href="cart.html">Cart</a>
-		</nav>
-	</td>
-	<hr>
-	<center>
-		<br>
-		<h1><center>Login</center></h1>
-		<br>
-		<form name="loginForm"  method="POST">
-			username  :  <input type="text" name="text1" id="username"><br><br><br>
-			password  :  <input type="password" name="text2" id="password"><br><br><br>
-			<input type="submit" name="loginButton" value="Login" onclick="loginValidation()" /><br><br>
-		</form>
-	</center>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="login.css">
 	<script type="text/javascript" src="validation.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+
+</head>
+<body >
+	
+
+<div class="login">
+  <div class="login-header">
+    <h2>Log<span>In</span></h2>
+  </div>
+  <div class="login-form">
+    <h3>Username:</h3>
+    <input type="text" placeholder="Username" id="username"/><br>
+    <h3>Password:</h3>
+    <input type="password" placeholder="Password" id="password"/>
+    <br>
+    <input type="button" value="Login" class="login-button" onclick="loginValidation()" />
+    <br>
+    <a class="sign-up" href="./register.html">Sign Up!</a>
+    
+  </div>
 </body>
 </html>
