@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "books.dtd">
+<book>
+	<details>
+		<title>Everyday Italian</title>
+		<author>Giada De Laurentiis</author>
+		<ISBN_number>1234</ISBN_number>
+		<publisher>Juventus F.C.</publisher>
+		<edition>2005</edition>
+		<price>30.00</price>
+	</details>
+	<details>
+		<title>Harry Potter</title>
+		<author>J K. Rowling</author>
+		<ISBN_number>5678</ISBN_number>
+		<publisher>Bonucci Publications</publisher>
+		<edition>2005</edition>
+		<price>29.99</price>
+	</details>
+	<details>
+		<title>Interstellar</title>
+		<author>Christopher Nolan</author>
+		<ISBN_number>9012</ISBN_number>
+		<publisher>Casillas Publications</publisher>
+		<edition>2003</edition>
+		<price>49.99</price>
+	</details>
+	<details>
+		<title>Learning XML</title>
+		<author>Erik T. Ray</author>
+		<ISBN_number>3456</ISBN_number>
+		<publisher>Eric Cantona Publications</publisher>
+		<edition>2003</edition>
+		<price>39.95</price>
+	</details>
+</book>
+		
