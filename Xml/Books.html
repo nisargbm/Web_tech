@@ -1,8 +1,9 @@
 <html>
 <head>
-
+<link rel="stylesheet" type="text/css" href="books.css">
 </head>
 <body>
+	<h1>Bookstore</h1>
 <script type="text/javascript">
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -16,15 +17,15 @@ xhttp.send();
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName('details');
-    document.write("<table>");
-    document.write("<tr><th>");
-    document.write("Title</th><th>Author</th><th>ISBN_number</th><th>Publisher</th><th>Edition</th><th>Price</th><tr>");
+    document.write("<table border='I'>");
+    document.write("<tr><th class='thb'>");
+    document.write("Title</th><th class='thb'>Author</th><th class='thb'>ISBN_number</th><th class='thb'>Publisher</th><th class='thb'>Edition</th><th class='thb'>Price</th></tr>");
     for(i=0;i<x.length;i++){
     	document.write("<tr><td>");
     	document.write(x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue);
-    	document.write("</td><th>");
+    	document.write("</td><td class='bg'>");
     	document.write(x[i].getElementsByTagName("author")[0].childNodes[0].nodeValue.toUpperCase());
-    	document.write("</td><th>");
+    	document.write("</td><td>");
     	document.write(x[i].getElementsByTagName("ISBN_number")[0].childNodes[0].nodeValue);
     	document.write("</td><td>");
     	document.write(x[i].getElementsByTagName("publisher")[0].childNodes[0].nodeValue);

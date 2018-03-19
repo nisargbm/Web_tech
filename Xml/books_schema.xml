@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bookstore
+xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="books.xsd">
+  <book>
+    <title>Compiler Design Principles Techniques</title>
+    <author>Ullmann</author>
+    <ISBN_number>ISBN-978-3-16-148410-0</ISBN_number>
+    <publisher>Pearson</publisher>
+    <edition>3</edition>
+    <price>Rs.800</price>
+  </book>
+    <book>
+    <title>Cryptography and Network Security</title>
+    <author>Forouzan</author>
+    <ISBN_number>ISBN-988-3-46-128800-4</ISBN_number>
+    <publisher>McGraw-Hill Education</publisher>
+    <edition>2</edition>
+    <price>Rs.600</price>
+  </book>
+   <book>
+    <title>Machine Learning</title>
+    <author>Tom M. Mitchell</author>
+    <ISBN_number>ISBN-718-2-06-158910-1</ISBN_number>
+    <publisher>Pearson</publisher>
+    <edition>1</edition>
+    <price>Rs.400</price>
+  </book>
+   <book>
+    <title>Mobile Communications</title>
+    <author>Jochen Schiller</author>
+    <ISBN_number>ISBN-888-1-96-248119-6</ISBN_number>
+    <publisher>Wiley</publisher>
+    <edition>1</edition>
+    <price>Rs.500</price>
+  </book>
+  
+</bookstore>
