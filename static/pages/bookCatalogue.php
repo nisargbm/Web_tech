@@ -1,24 +1,57 @@
- <!DOCTYPE html>
+<?php
+// Include config file
+require_once './../../config.php';
+$sql = "SELECT * FROM books ";
+$result = $conn->query($sql);
+
+?>
+<!DOCTYPE html>
  <html>
  <head>
  	<title>Home</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- 	<link rel="stylesheet" type="text/css" href="home.css">
- 	<link rel="stylesheet" type="text/css" href="navbar.css">
+ 	<link rel="stylesheet" type="text/css" href="./../css/home.css">
+ 	<link rel="stylesheet" type="text/css" href="./../css/navbar.css">
 </head>
 <body >
-	<ul class="topnav">
-			<li><a href="home.html"><b>Website</b></a></li>
-			<li><a href="home.html">Home</a></li>
-			<li><a href="bookCatalogue.html">Menu</a></li>
-			<li><a href=" profile.html">Profile</a></li>
-			<li class="right"><a href="login.html">Login</a></li>
-			<li class="right"><a href="register.html">Register</a></li>
-			<li><a href="cart.html">Cart</a></li>
-	</ul>
+	<?php
+		include 'navbar.php';
+	?>
 	<hr>
 	<center>
-		<table class="table-books" >
+			<?php
+			if ( $result->num_rows > 0){
+				$i = 0;
+				echo "<table class='table-books' >";
+				while($row=mysqli_fetch_array($result)){
+					if( $i % 4 === 0){
+						echo "<tr>
+						";
+					}
+					echo "<td>
+								<div class='bookBlock'>
+									<img src='".$row['imagepath']."'><br>
+									<center>
+										<a href='bookDetails.php?submit=".$row['id']."'>".$row['name']."</a>
+									</center>
+								</div>
+							</td>
+							";
+					if( $i % 4 === 3){
+						echo "</tr>
+						";
+					}
+					$i++;
+				}
+				if ($i % 4 !== 3) {
+					echo "</tr>
+					";
+				}
+				echo "</table>";
+			}
+			?>
+		
+		<!-- <table class="table-books" >
 			<tr>
 				<td>
 					<div class="bookBlock">
@@ -123,7 +156,7 @@
 					</div>
 				</td>
 			</tr>
-		</table>
+		</table> -->
 	</center>
 </body>
 </html>

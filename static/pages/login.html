@@ -2,8 +2,8 @@
 <head>
   <title>Login</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="login.css">
-	<script type="text/javascript" src="validation.js"></script>
+	<link rel="stylesheet" type="text/css" href="./../css/login.css">
+	<script type="text/javascript" src="./../js/validation.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 </head>
@@ -14,16 +14,17 @@
   <div class="login-header">
     <h2>Log<span>In</span></h2>
   </div>
+  <form action="./../../process_login.php" method="post" onsubmit=" return loginValidation()">
   <div class="login-form">
     <h3>Username:</h3>
-    <input type="text" placeholder="Username" id="username"/><br>
+    <input type="text" placeholder="Username" id="username" name="username"/><br>
     <h3>Password:</h3>
-    <input type="password" placeholder="Password" id="password"/>
+    <input type="password" placeholder="Password" id="password" name="password"/>
     <br>
-    <input type="button" value="Login" class="login-button" onclick="loginValidation()" />
+    <input type="submit" value="Login" class="login-button"" />
     <br>
     <a class="sign-up" href="./register.html">Sign Up!</a>
-    
   </div>
+</form>
 </body>
 </html>

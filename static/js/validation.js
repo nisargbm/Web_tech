@@ -8,7 +8,7 @@ if(username==""){alert("Enter username");flag=false;}
 else if(password==""){alert("Enter password");flag=false;}
 else if(!regexName.test(username)){alert("Invalid username");flag=false;}
 else if(!regexPassword.test(password)){alert("Invalid password length");flag=false;}
-if(flag){alert ("Login successfully");
+if(flag){alert ("Validation successfully");
 	window.location = "./home.html";
 	return flag;}
 else{return false;}
@@ -28,7 +28,7 @@ else if(dob==""){alert("Enter Date of Birth");flag=false;}
 else if(name==""){alert("Enter Name");flag=false;}
 else if(!regexCCNumber.test(ccNumber)){alert("Invalid Credit Card Number");flag=false;}
 else if(!regexName.test(name)){alert("Invalid Name");flag=false;}
-if(flag){alert ("Payment successfully");window.location = "./home.html";}
+if(flag){alert ("Payment Validation successfully");window.location = "./home.html"; return flag;}
 else{return false;}
 }
 
@@ -54,6 +54,6 @@ else if(!nameRegex.test(name)){alert("Invalid Name");flag=false;}
 else if(!phoneRegex.test(phone)){alert("Invalid Phone Number");flag=false;}
 else if(!emailRegex.test(email)){alert("Invalid email");flag=false;}
 else if(password != confirmPassword){alert("Passwords donot match");flag=false;}
-if(flag){alert ("Registration successfully");window.location = "./home.html";}
+if(flag){alert ("Validation successfully");window.location = "./home.html"; return flag;}
 else{return false;}
 }

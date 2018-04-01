@@ -1,0 +1,28 @@
+
+
+<html>
+<head>
+  <title>Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script type="text/javascript" src="../js/validation.js"></script>
+</head>
+<body >
+	<div class="login">
+  <div class="login-header">
+    <h2>Sign<span>Up</span></h2>
+  </div>
+  <form action="./../../process_register.php" method="post" onsubmit=" return registerValidation()">
+  <div class="login-form">
+    <input type="text" placeholder="Username" name="username" id="username"/><br>
+    <input type='text' placeholder="Name" name='name' id='name'><br>
+    <input type='Date' placeholder="Dob" name='dob' id='dob'><br>
+    <input type='text' placeholder="Phone" name='phone' id='phone'><br>
+    <input type='text' placeholder="email" name='email' id='email'><br>
+    <input type="password" placeholder="Password" name='password' id="password"/><br>
+    <input type='password'  placeholder="confirm Password" name='confirmPassword' id='confirmPassword'><br>
+    <input type="submit" name='submit' value="SignUp" class="login-button" /><br>
+  </div>
+	</form>
+</body>
+</html>
