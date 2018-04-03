@@ -29,8 +29,8 @@ $row = mysqli_fetch_assoc($result);
 				Name : ".$row['name']."<br><br>
 				Cost : ".$row['cost']."<br><br>
 				Author : ".$row['author']."<br><br>
-				<button><a href='cart.html'>Add to Cart</a></button>
-				<button><a href='payment.html'>Buy</a></button>";
+				<button><a href='cart.php?id=".$row['id']."'>Add to Cart</a></button>
+				<button><a href='payment.php?id=".$row['id']."'>Buy</a></button>";
 		 ?>
 		<!-- <img src="image1.png" width="250" height="250"><br><br>
 		Book ID : 12345<br><br>

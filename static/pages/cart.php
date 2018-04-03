@@ -3,7 +3,15 @@
 require_once './../../config.php';
 
 $id='';
-if(isset($_REQUEST['id'])){   $id = $_REQUEST['id']; }
+if(isset($_REQUEST['id'])){   $id = $_REQUEST['id']; 
+	$sql = "INSERT INTO cart (book_id , user_id) VALUES ('$id' , 1)";
+	if ($conn->query($sql) === TRUE) {
+		echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+}
+
 
 // if(!isset($_SESSION['username'])){
 // 	header('location: login.html');
@@ -11,10 +19,11 @@ if(isset($_REQUEST['id'])){   $id = $_REQUEST['id']; }
 // $sql1 = "SELECT id FROM users WHERE name = '$username' ";
 // $result1 = $conn->query($sql1);
 // $row1 = mysqli_fetch_assoc($result1);
+// $user_id = $row['id'];
 
-$sql = "SELECT * FROM  books  WHERE id = (SELECT book_id FROM cart WHERE user_id = '1')";
+// $sql = "SELECT * FROM  books  WHERE books.id = (SELECT book_id FROM cart WHERE user_id = 1);";
+$sql = "SELECT * FROM books INNER JOIN cart ON cart.book_id = books.id AND cart.user_id = 1";
 $result = $conn->query($sql);
-
 ?>
  <!DOCTYPE html>
  <html>
@@ -60,6 +69,9 @@ $result = $conn->query($sql);
 					";
 				}
 				echo "</table>";
+			}
+			else{
+				echo "<h2>Cart Empty</h2>";
 			}
 			?>
  	<hr><hr>
