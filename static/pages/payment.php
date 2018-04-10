@@ -26,9 +26,7 @@ $row = mysqli_fetch_assoc($result);
         Book ID : ".$row['id']."<br><br>
         Name : ".$row['name']."<br><br>
         Cost : ".$row['cost']."<br><br>
-        Author : ".$row['author']."<br><br>
-        <button><a href='cart.php?id=".$row['id']."'>Add to Cart</a></button>
-        <button><a href='payment.php?id=".$row['id']."'>Buy</a></button>";
+        Author : ".$row['author']."<br><br>";
      ?>
     <!-- <img src="image1.png" width="250" height="250"><br><br>
     Book ID : 12345<br><br>
@@ -48,7 +46,7 @@ $row = mysqli_fetch_assoc($result);
          <input type="date" placeholder="Date of Birth" name="dob" id="dob" required /><br><br>
       <input type="submit" value="Pay" onclick="ccValidation()" /><br>
     </form>
-   <a href="home.html">Home</a>
+   <a href="home.php">Home</a>
    </center>
    <hr>
    <hr> 
